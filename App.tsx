@@ -1,24 +1,22 @@
 
 import React, { useState, useEffect } from 'react';
-import UrgencyBar from './components/UrgencyBar';
-import CountdownTimer from './components/CountdownTimer';
-import Carousel from './components/Carousel';
-import VideoPlayer from './components/VideoPlayer';
-import PricingCard from './components/PricingCard';
-import FAQ from './components/FAQ';
-import FakeNotification from './components/FakeNotification';
-import UpgradePopup from './components/UpgradePopup';
-import ReviewGrid from './components/ReviewGrid';
-import StickyCTA from './components/StickyCTA';
-import { PricingPlan } from './types';
+import UrgencyBar from './components/UrgencyBar.tsx';
+import CountdownTimer from './components/CountdownTimer.tsx';
+import Carousel from './components/Carousel.tsx';
+import VideoPlayer from './components/VideoPlayer.tsx';
+import PricingCard from './components/PricingCard.tsx';
+import FAQ from './components/FAQ.tsx';
+import FakeNotification from './components/FakeNotification.tsx';
+import UpgradePopup from './components/UpgradePopup.tsx';
+import ReviewGrid from './components/ReviewGrid.tsx';
+import StickyCTA from './components/StickyCTA.tsx';
+import { PricingPlan } from './types.ts';
 
 const App: React.FC = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
 
-  // Back redirect logic (Exit Intent)
   useEffect(() => {
     const handlePopState = () => {
-      // Small delay to ensure state update before redirect if needed
       window.location.href = 'https://pay.lowify.com.br/checkout?product_id=vO5XU4';
     };
     window.history.pushState(null, '', window.location.href);
@@ -93,7 +91,6 @@ const App: React.FC = () => {
       <UrgencyBar />
       <CountdownTimer />
       
-      {/* Hero Section */}
       <section className="px-5 pt-12 pb-10 bg-white">
         <h2 className="text-[#1a1a2e] text-[26px] font-extrabold text-center leading-[1.1] mb-2 uppercase">
           O MAIOR PACK DE JOGOS DO BRASIL 🇧🇷
@@ -164,7 +161,6 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Game List Section */}
       <section className="px-5 py-16 bg-gray-50 border-t border-gray-100">
         <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 mb-12">
           <h2 className="text-[#3700ff] text-xs font-black text-center mb-4 tracking-[0.2em] uppercase">Mais de 900 Títulos</h2>
@@ -191,13 +187,11 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Social Proof */}
       <section className="px-5 py-12">
         <h2 className="text-center text-2xl font-black mb-8">O Que Dizem Nossos Clientes</h2>
         <ReviewGrid />
       </section>
 
-      {/* Offers Section */}
       <section id="ofertas" className="px-5 py-16 bg-[#0a0a0a]">
         <div className="text-center mb-12">
           <p className="text-green-400 font-black text-xs uppercase tracking-[0.3em] mb-4">Escolha sua Experiência</p>
@@ -222,7 +216,6 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Final Section */}
       <section className="px-5 py-16 bg-white">
         <FAQ />
         
@@ -253,7 +246,6 @@ const App: React.FC = () => {
         </p>
       </footer>
 
-      {/* Popups */}
       <UpgradePopup 
         isOpen={activePopup === 'basic'}
         onClose={() => setActivePopup(null)}
