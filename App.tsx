@@ -59,7 +59,8 @@ const App: React.FC = () => {
       buttonText: '👉 Adquirir 945 Jogos',
       buttonUrl: '#',
       accentColor: '#22c55e',
-      variant: 'minimal'
+      variant: 'minimal',
+      image: 'https://i.imgur.com/hR4WQ5l.png'
     },
     {
       id: 'premium',
@@ -256,7 +257,7 @@ const App: React.FC = () => {
         badge="OFERTA RELÂMPAGO"
         title="Upgrade: Pack 945 Jogos SNES"
         price="R$ 19,90"
-        image="https://i.ibb.co/WpDrm2L4/TOTAL.jpg"
+        image="https://i.imgur.com/hR4WQ5l.png"
         benefits={[
           "945 Jogos: Diversão garantida por meses!",
           "Salva o progresso e tem Rebobinar",
@@ -276,7 +277,7 @@ const App: React.FC = () => {
         badge="OFERTA RELÂMPAGO"
         title="Upgrade: Pack Multi-Vídeo-Games"
         price="R$ 37,90"
-        image="https://i.imgur.com/lcPUIjh.png"
+        image="https://i.imgur.com/rMpvc9l.jpeg"
         benefits={[
           "PS2, PS1 e N64: Os maiores clássicos 3D",
           "Gráficos HD e suporte a Controle Bluetooth",
