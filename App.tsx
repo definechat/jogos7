@@ -258,36 +258,36 @@ const App: React.FC = () => {
         price="R$ 19,90"
         image="https://i.ibb.co/WpDrm2L4/TOTAL.jpg"
         benefits={[
-          "Todos os 945 Jogos Inesquecíveis",
-          "Donkey Kong, Mortal Kombat e +",
-          "Suporte VIP via WhatsApp",
-          "Vídeo Aula Passo a Passo",
-          "Acesso Vitalício no Google Drive"
+          "945 Jogos: Diversão garantida por meses!",
+          "Salva o progresso e tem Rebobinar",
+          "Suporte VIP prioritário no Whats",
+          "Tutorial em vídeo - Instalou, Jogou!",
+          "Acesso Vitalício direto no seu Google Drive"
         ]}
         primaryUrl="https://pay.wiapy.com/M6jtVThEY"
         secondaryUrl="https://pay.wiapy.com/eekA_AHWpV"
         primaryText="SIM! LIBERAR 945 JOGOS POR R$ 19,90"
-        secondaryText="Não, quero continuar com a oferta de 10 reais"
+        secondaryText="Não, quero continuar com a oferta anterior de 10"
       />
 
       <UpgradePopup 
         isOpen={activePopup === 'standard'}
         onClose={() => setActivePopup(null)}
         badge="OFERTA RELÂMPAGO"
-        title="Upgrade: Locadora Completa (PS2, PS1, N64)"
+        title="Upgrade: Pack Multi-Vídeo-Games"
         price="R$ 37,90"
-        image="https://i.imgur.com/rMpvc9l.jpeg"
+        image="https://i.imgur.com/lcPUIjh.png"
         benefits={[
-          "TUDO LIBERADO: PS2, PS1, N64 e SNES",
-          "Mega Drive, Game Boy e Pack Extras",
-          "Suporte Prioritário Permanente",
-          "Acesso Vitalício e Imediato",
-          "Funciona 100% Offline"
+          "PS2, PS1 e N64: Os maiores clássicos 3D",
+          "Gráficos HD e suporte a Controle Bluetooth",
+          "Biblioteca Completa com +2000 títulos",
+          "Jogue God of War, GTA e Mario 64 no Celular",
+          "100% Seguro, Vitalício e Offline"
         ]}
         primaryUrl="https://pay.wiapy.com/GaTzXJTNW"
         secondaryUrl="https://pay.wiapy.com/Bcs9vP6KOo"
         primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
-        secondaryText="Não, quero apenas o Super Nintendo"
+        secondaryText="Não, quero continuar com a oferta anterior de 29,90"
       />
 
       <FakeNotification />
