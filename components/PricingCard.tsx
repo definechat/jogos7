@@ -11,10 +11,10 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
   const isClassic = plan.variant === 'classic';
 
   const handleAction = () => {
-    // Rastreamento do Pixel
+    // Rastreamento detalhado do Pixel solicitado
     if (typeof (window as any).fbq === 'function') {
       (window as any).fbq('track', 'InitiateCheckout', {
-        content_name: plan.title,
+        content_name: plan.trackingId,
         value: parseFloat(plan.price.replace('R$ ', '').replace(',', '.')),
         currency: 'BRL'
       });
@@ -29,6 +29,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
 
   return (
     <div 
+      id={`plan-${plan.id}`}
       className={`bg-white rounded-2xl p-8 mb-6 border-4 transition-all ${
         isClassic 
           ? 'animate-neon-blue z-10 relative' 
@@ -83,6 +84,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
       </div>
 
       <button 
+        id={`btn-checkout-${plan.id}`}
         onClick={handleAction}
         className={`w-full py-5 px-6 rounded-xl font-black text-center transition-all shadow-lg hover:brightness-110 active:scale-[0.98] uppercase tracking-tight text-lg ${
           isClassic 

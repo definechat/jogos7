@@ -38,6 +38,7 @@ const App: React.FC = () => {
       buttonText: 'Adquirir Oferta Básica',
       buttonUrl: '#',
       accentColor: '#94a3b8',
+      trackingId: 'btn_oferta_10_principal',
       variant: 'minimal'
     },
     {
@@ -59,6 +60,7 @@ const App: React.FC = () => {
       buttonText: '👉 Adquirir 945 Jogos',
       buttonUrl: '#',
       accentColor: '#22c55e',
+      trackingId: 'btn_oferta_29_principal',
       variant: 'minimal',
       image: 'https://i.imgur.com/hR4WQ5l.png'
     },
@@ -82,6 +84,7 @@ const App: React.FC = () => {
       buttonText: '👉 Adquirir Pack Completo',
       buttonUrl: 'https://pay.wiapy.com/R27ONnaVxW',
       accentColor: '#1e40af',
+      trackingId: 'btn_oferta_47_final',
       variant: 'classic',
       image: 'https://i.imgur.com/rMpvc9l.jpeg'
     }
@@ -269,6 +272,9 @@ const App: React.FC = () => {
         secondaryUrl="https://pay.wiapy.com/eekA_AHWpV"
         primaryText="SIM! LIBERAR 945 JOGOS POR R$ 19,90"
         secondaryText="Não, quero continuar com a oferta anterior de 10"
+        upsellTrackingId="btn_upsell_19_90"
+        confirmTrackingId="btn_oferta_10_confirmado"
+        confirmPriceValue={10.00}
       />
 
       <UpgradePopup 
@@ -289,6 +295,9 @@ const App: React.FC = () => {
         secondaryUrl="https://pay.wiapy.com/Bcs9vP6KOo"
         primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
         secondaryText="Não, quero continuar com a oferta anterior de 29,90"
+        upsellTrackingId="btn_upsell_37_90"
+        confirmTrackingId="btn_oferta_29_confirmado"
+        confirmPriceValue={29.90}
       />
 
       <FakeNotification />
