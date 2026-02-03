@@ -9,7 +9,6 @@ import FAQ from './components/FAQ.tsx';
 import FakeNotification from './components/FakeNotification.tsx';
 import UpgradePopup from './components/UpgradePopup.tsx';
 import ReviewGrid from './components/ReviewGrid.tsx';
-import StickyCTA from './components/StickyCTA.tsx';
 import { PricingPlan } from './types.ts';
 
 const App: React.FC = () => {
@@ -17,7 +16,8 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      window.location.href = 'https://pay.lowify.com.br/checkout?product_id=vO5XU4';
+      // Redireciona para o checkout do plano premium na saída
+      window.location.href = 'https://pay.wiapy.com/R27ONnaVxW';
     };
     window.history.pushState(null, '', window.location.href);
     window.addEventListener('popstate', handlePopState);
@@ -37,7 +37,7 @@ const App: React.FC = () => {
         'Suporte por E-mail'
       ],
       buttonText: 'Adquirir Oferta Básica',
-      buttonUrl: 'https://pay.lowify.com.br/checkout?product_id=nU2bLq',
+      buttonUrl: 'https://pay.wiapy.com/eekA_AHWpV',
       accentColor: '#94a3b8',
       variant: 'minimal'
     },
@@ -58,7 +58,7 @@ const App: React.FC = () => {
         'Total: 945 Jogos'
       ],
       buttonText: '👉 Adquirir 945 Jogos',
-      buttonUrl: '#',
+      buttonUrl: 'https://pay.wiapy.com/Bcs9vP6KOo',
       accentColor: '#22c55e',
       variant: 'minimal'
     },
@@ -80,7 +80,7 @@ const App: React.FC = () => {
         '🎁 Bônus: Guia de Controles'
       ],
       buttonText: '👉 Adquirir Pack Completo',
-      buttonUrl: 'https://pay.lowify.com.br/checkout?product_id=vO5XU4',
+      buttonUrl: 'https://pay.wiapy.com/R27ONnaVxW',
       accentColor: '#22c55e',
       variant: 'classic',
       image: 'https://i.imgur.com/rMpvc9l.jpeg'
@@ -108,6 +108,11 @@ const App: React.FC = () => {
              <span className="block">🚀 Envio Imediato no Email</span>
              <span className="block">✅ Sem Mensalidades</span>
              <span className="block">🎮 Suporte para Controle BT</span>
+             <span className="block">📱 Acesso a área de membros</span>
+             <span className="block">⭐ Suporte 24H</span>
+             <span className="block">✅ Instalação fácil</span>
+             <span className="block">⚡ Funciona sem internet</span>
+             <span className="block">🚀 Envio imediato</span>
            </p>
         </div>
 
@@ -183,8 +188,7 @@ const App: React.FC = () => {
         </div>
 
         <div className="text-center">
-          <h2 className="text-gray-900 text-2xl font-black mb-6">Seu Super Nintendo no Bolso</h2>
-          <img src="https://i.ibb.co/HfMvhvMQ/unnamed-9.webp" alt="SNES Mobile" className="w-full rounded-3xl shadow-xl" />
+          <img src="https://i.imgur.com/hT04TK7.jpeg" alt="Retro Gaming Mobile" className="w-full rounded-3xl shadow-xl" />
         </div>
       </section>
 
@@ -259,8 +263,8 @@ const App: React.FC = () => {
           "Vídeo Tutorial Passo a Passo",
           "Acesso Vitalício no Drive"
         ]}
-        primaryUrl="https://pay.lowify.com.br/checkout?product_id=B3onoX"
-        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=nU2bLq"
+        primaryUrl="https://pay.wiapy.com/Bcs9vP6KOo"
+        secondaryUrl="https://pay.wiapy.com/eekA_AHWpV"
         primaryText="QUERO O PACOTE MASTER"
         secondaryText="Não, quero apenas 10 jogos"
       />
@@ -277,14 +281,13 @@ const App: React.FC = () => {
           "Bônus: Pack de Wallpapers Retro",
           "Grupo VIP de Suporte"
         ]}
-        primaryUrl="https://pay.lowify.com.br/checkout?product_id=6hH2Hr"
-        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=eXyF1x"
+        primaryUrl="https://pay.wiapy.com/R27ONnaVxW"
+        secondaryUrl="https://pay.wiapy.com/Bcs9vP6KOo"
         primaryText="QUERO TUDO LIBERADO"
         secondaryText="Não, ficar só com o SNES"
       />
 
       <FakeNotification />
-      <StickyCTA />
       
       <style>{`
         @keyframes fadeIn {
