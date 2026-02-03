@@ -17,7 +17,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Funciona em iPhone (iOS)?",
-    answer: "Este método específico e o emulador oficial são focados no sistema Android (Samsung, Xiaomi, Motorola, etc). Se você tem iPhone, não recomendamos a compra deste pacote específico."
+    answer: "Sim! Nosso pack é totalmente compatível com iOS (iPhone/iPad) e Android. Você receberá as instruções detalhadas para configurar em ambos os sistemas de forma simples e rápida."
   },
   {
     question: "Quais formas de pagamento são aceitas?",

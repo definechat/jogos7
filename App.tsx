@@ -9,7 +9,6 @@ import FAQ from './components/FAQ.tsx';
 import FakeNotification from './components/FakeNotification.tsx';
 import UpgradePopup from './components/UpgradePopup.tsx';
 import ReviewGrid from './components/ReviewGrid.tsx';
-import StickyCTA from './components/StickyCTA.tsx';
 import { PricingPlan } from './types.ts';
 
 const App: React.FC = () => {
@@ -38,7 +37,7 @@ const App: React.FC = () => {
       ],
       buttonText: 'Adquirir Oferta Básica',
       buttonUrl: '#',
-      accentColor: '#94a3b8',
+      accentColor: '#22c55e', // Alterado para Verde conforme solicitado
       trackingId: 'btn_oferta_10_principal',
       buttonId: 'btn_10', // ID SOLICITADO
       variant: 'minimal'
@@ -289,7 +288,6 @@ const App: React.FC = () => {
       />
 
       <FakeNotification />
-      <StickyCTA />
     </div>
   );
 };
