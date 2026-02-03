@@ -13,17 +13,18 @@ interface UpgradePopupProps {
   secondaryUrl: string;
   primaryText: string;
   secondaryText: string;
-  // Novos props de rastreamento
+  // Tracking Props
   upsellTrackingId: string;
+  upsellButtonId: string;
   confirmTrackingId: string;
   confirmPriceValue: number;
 }
 
 const UpgradePopup: React.FC<UpgradePopupProps> = ({
   isOpen, onClose, title, badge, price, benefits, image, primaryUrl, secondaryUrl, primaryText, secondaryText,
-  upsellTrackingId, confirmTrackingId, confirmPriceValue
+  upsellTrackingId, upsellButtonId, confirmTrackingId, confirmPriceValue
 }) => {
-  const [timeLeft, setTimeLeft] = useState(180); // 3 minutos
+  const [timeLeft, setTimeLeft] = useState(180);
 
   useEffect(() => {
     if (!isOpen) {
@@ -31,7 +32,6 @@ const UpgradePopup: React.FC<UpgradePopupProps> = ({
       return;
     }
 
-    // Rastreamento de visualização da oferta
     if (typeof (window as any).fbq === 'function') {
       (window as any).fbq('track', 'ViewContent', {
         content_name: title,
@@ -47,10 +47,12 @@ const UpgradePopup: React.FC<UpgradePopupProps> = ({
 
   const handleUpsellClick = () => {
     if (typeof (window as any).fbq === 'function') {
+      const priceValue = parseFloat(price.replace('R$ ', '').replace(',', '.'));
       (window as any).fbq('track', 'InitiateCheckout', {
         content_name: upsellTrackingId,
-        value: parseFloat(price.replace('R$ ', '').replace(',', '.')),
-        currency: 'BRL'
+        value: priceValue,
+        currency: 'BRL',
+        content_type: 'product'
       });
     }
   };
@@ -60,7 +62,8 @@ const UpgradePopup: React.FC<UpgradePopupProps> = ({
       (window as any).fbq('track', 'InitiateCheckout', {
         content_name: confirmTrackingId,
         value: confirmPriceValue,
-        currency: 'BRL'
+        currency: 'BRL',
+        content_type: 'product'
       });
     }
   };
@@ -126,7 +129,7 @@ const UpgradePopup: React.FC<UpgradePopupProps> = ({
             href={primaryUrl} 
             target="_blank" 
             onClick={handleUpsellClick}
-            id="btn-upsell-confirm"
+            id={upsellButtonId} // ID solicitado (btn_19, btn_37)
             className="block w-full py-5 bg-[#d4a853] text-[#0f0f1b] font-black rounded-2xl uppercase mb-4 hover:scale-[1.03] active:scale-[0.97] transition-all shadow-[0_10px_25px_rgba(212,168,83,0.3)] text-base text-center"
           >
             {primaryText}
@@ -136,7 +139,6 @@ const UpgradePopup: React.FC<UpgradePopupProps> = ({
             href={secondaryUrl} 
             target="_blank" 
             onClick={handleConfirmOriginalClick}
-            id="btn-confirm-original"
             className="block w-full py-2 text-white/30 font-bold uppercase text-[10px] tracking-widest hover:text-white/60 transition-colors text-center"
           >
             {secondaryText}

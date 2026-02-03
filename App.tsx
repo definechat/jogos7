@@ -9,6 +9,7 @@ import FAQ from './components/FAQ.tsx';
 import FakeNotification from './components/FakeNotification.tsx';
 import UpgradePopup from './components/UpgradePopup.tsx';
 import ReviewGrid from './components/ReviewGrid.tsx';
+import StickyCTA from './components/StickyCTA.tsx';
 import { PricingPlan } from './types.ts';
 
 const App: React.FC = () => {
@@ -39,6 +40,7 @@ const App: React.FC = () => {
       buttonUrl: '#',
       accentColor: '#94a3b8',
       trackingId: 'btn_oferta_10_principal',
+      buttonId: 'btn_10', // ID SOLICITADO
       variant: 'minimal'
     },
     {
@@ -61,6 +63,7 @@ const App: React.FC = () => {
       buttonUrl: '#',
       accentColor: '#22c55e',
       trackingId: 'btn_oferta_29_principal',
+      buttonId: 'btn_29', // ID SOLICITADO
       variant: 'minimal',
       image: 'https://i.imgur.com/hR4WQ5l.png'
     },
@@ -85,6 +88,7 @@ const App: React.FC = () => {
       buttonUrl: 'https://pay.wiapy.com/R27ONnaVxW',
       accentColor: '#1e40af',
       trackingId: 'btn_oferta_47_final',
+      buttonId: 'btn_47', // ID SOLICITADO
       variant: 'classic',
       image: 'https://i.imgur.com/rMpvc9l.jpeg'
     }
@@ -150,8 +154,6 @@ const App: React.FC = () => {
             <VideoPlayer 
               videoId="Ta7ZqtwHuu8" 
               label="Marcelo: 'Meus filhos amaram o Pack'" 
-              playerId="ytplayer"
-              soundBtnId="soundBtn"
             />
             <VideoPlayer 
               videoId="tOfgjOZOZiE" 
@@ -189,10 +191,6 @@ const App: React.FC = () => {
             <p className="text-center text-gray-400 font-bold text-xs mt-4 uppercase">...e centenas de outros!</p>
           </div>
         </div>
-
-        <div className="text-center">
-          <img src="https://i.imgur.com/hT04TK7.jpeg" alt="Retro Gaming Mobile" className="w-full rounded-3xl shadow-xl" />
-        </div>
       </section>
 
       <section className="px-5 py-12">
@@ -214,14 +212,6 @@ const App: React.FC = () => {
             onUpgradeClick={() => setActivePopup(plan.id)}
           />
         ))}
-
-        <div className="bg-[#1a1a1a] border border-green-500/30 p-6 rounded-2xl flex items-center gap-5 mt-10">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-12 h-12" />
-          <div>
-            <p className="text-white font-bold text-sm">Acesso enviado via WhatsApp</p>
-            <p className="text-gray-400 text-xs">Receba o link e o tutorial direto no celular.</p>
-          </div>
-        </div>
       </section>
 
       <section className="px-5 py-16 bg-white">
@@ -236,9 +226,6 @@ const App: React.FC = () => {
 
           <div className="bg-gray-50 p-8 rounded-3xl text-center w-full">
             <h3 className="text-2xl font-black mb-4">7 DIAS DE GARANTIA</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-8">
-              Confiamos tanto no nosso material que se você não gostar, devolvemos seu dinheiro na hora. Sem perguntas, sem burocracia.
-            </p>
             <img src="https://i.ibb.co/JNDVpJb/unnamed-1.webp" alt="Selo de Garantia" className="w-32 mx-auto" />
           </div>
         </div>
@@ -249,11 +236,9 @@ const App: React.FC = () => {
           Este site não é afiliado ao Google, Meta ou Nintendo. <br/>
           Copyright © 2025 Jogos Retro Mobile. Todos os direitos reservados.
         </p>
-        <p className="text-[10px] text-gray-300">
-          Suporte: JogosNitendoAndroid2025@gmail.com
-        </p>
       </footer>
 
+      {/* POPUP OFERTA 1 - TRIGGER PELO PLANO BASIC (10) */}
       <UpgradePopup 
         isOpen={activePopup === 'basic'}
         onClose={() => setActivePopup(null)}
@@ -273,10 +258,12 @@ const App: React.FC = () => {
         primaryText="SIM! LIBERAR 945 JOGOS POR R$ 19,90"
         secondaryText="Não, quero continuar com a oferta anterior de 10"
         upsellTrackingId="btn_upsell_19_90"
+        upsellButtonId="btn_19" // ID SOLICITADO
         confirmTrackingId="btn_oferta_10_confirmado"
         confirmPriceValue={10.00}
       />
 
+      {/* POPUP OFERTA 2 - TRIGGER PELO PLANO STANDARD (29,90) */}
       <UpgradePopup 
         isOpen={activePopup === 'standard'}
         onClose={() => setActivePopup(null)}
@@ -296,11 +283,13 @@ const App: React.FC = () => {
         primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
         secondaryText="Não, quero continuar com a oferta anterior de 29,90"
         upsellTrackingId="btn_upsell_37_90"
+        upsellButtonId="btn_37" // ID SOLICITADO
         confirmTrackingId="btn_oferta_29_confirmado"
         confirmPriceValue={29.90}
       />
 
       <FakeNotification />
+      <StickyCTA />
     </div>
   );
 };

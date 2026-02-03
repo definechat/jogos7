@@ -11,13 +11,18 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
   const isClassic = plan.variant === 'classic';
 
   const handleAction = () => {
-    // Rastreamento detalhado do Pixel solicitado
+    // Rastreamento exato solicitado pelo usuário
     if (typeof (window as any).fbq === 'function') {
+      const priceValue = parseFloat(plan.price.replace('R$ ', '').replace(',', '.'));
+      
       (window as any).fbq('track', 'InitiateCheckout', {
         content_name: plan.trackingId,
-        value: parseFloat(plan.price.replace('R$ ', '').replace(',', '.')),
-        currency: 'BRL'
+        value: priceValue,
+        currency: 'BRL',
+        content_type: 'product'
       });
+      
+      console.log(`[Pixel] InitiateCheckout: ${plan.trackingId} - R$ ${priceValue}`);
     }
 
     if (plan.buttonUrl === '#') {
@@ -29,7 +34,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
 
   return (
     <div 
-      id={`plan-${plan.id}`}
+      id={`plan-container-${plan.id}`}
       className={`bg-white rounded-2xl p-8 mb-6 border-4 transition-all ${
         isClassic 
           ? 'animate-neon-blue z-10 relative' 
@@ -84,7 +89,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
       </div>
 
       <button 
-        id={`btn-checkout-${plan.id}`}
+        id={plan.buttonId} // ID solicitado (btn_10, btn_29, btn_47)
         onClick={handleAction}
         className={`w-full py-5 px-6 rounded-xl font-black text-center transition-all shadow-lg hover:brightness-110 active:scale-[0.98] uppercase tracking-tight text-lg ${
           isClassic 

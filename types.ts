@@ -10,6 +10,7 @@ export interface PricingPlan {
   buttonUrl: string;
   accentColor: string;
   trackingId: string; // ID para o content_name do Facebook Pixel
+  buttonId: string;   // ID HTML solicitado (ex: btn_10)
   variant?: 'minimal' | 'classic';
   image?: string;
 }
