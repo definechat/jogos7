@@ -69,11 +69,12 @@ const App: React.FC = () => {
       price: 'R$ 47,90',
       originalPrice: 'R$ 198,00',
       benefits: [
-        'PS2 - 50 Clássicos (GTA, God of War)',
+        'PS2 - 50 Clássicos (GTA, God of War) + pack extra',
+        'PS1 - Clássicos Inesquecíveis + pack extra',
         '945 Jogos Super Nintendo',
-        'Mega Drive (Sonic, Alex Kidd)',
-        'Nintendo 64 (007, Mario 64)',
-        'Game Boy Color & Advance',
+        'Mega Drive (Sonic, Alex Kidd) + pack extra',
+        'Nintendo 64 (007, Mario 64) + pack extra',
+        'Game Boy Color & Advance + pack extra',
         '📞 Suporte VIP Permanente',
         'Acesso Vitalício',
         '🎁 Bônus: Guia de Controles'
@@ -99,7 +100,7 @@ const App: React.FC = () => {
           +900 JOGOS CLÁSSICOS
         </h2>
         <p className="text-gray-700 text-lg font-medium text-center leading-relaxed mb-8">
-          Tenha o <span className="font-bold">Playstation 2, Super Nintendo, Mega Drive e Game Boy</span> no seu celular (Android ou iOS).
+          Tenha o <span className="font-bold">Playstation 2, Playstation 1, Nintendo 64, Super Nintendo, Mega Drive e Game Boy</span> no seu celular (Android ou iOS).
         </p>
         
         <div className="bg-green-50 rounded-3xl p-6 text-center shadow-sm border-2 border-green-200 mb-10 transform -rotate-1">
@@ -271,8 +272,8 @@ const App: React.FC = () => {
         title="Combo Locadora Completa"
         price="R$ 37,90"
         benefits={[
-          "PS2 + SNES + MEGA DRIVE",
-          "N64 + GAME BOY",
+          "PS2 + PS1 + SNES + MEGA DRIVE",
+          "N64 + GAME BOY + PACK EXTRA",
           "Bônus: Pack de Wallpapers Retro",
           "Grupo VIP de Suporte"
         ]}
