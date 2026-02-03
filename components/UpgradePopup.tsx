@@ -25,11 +25,31 @@ const UpgradePopup: React.FC<UpgradePopupProps> = ({
       setTimeLeft(180);
       return;
     }
+
+    // Rastreamento do Pixel ao abrir o Popup
+    if (typeof (window as any).fbq === 'function') {
+      (window as any).fbq('track', 'ViewContent', {
+        content_name: title,
+        content_category: 'Upgrade Offer'
+      });
+    }
+
     const timer = setInterval(() => {
       setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
     }, 1000);
     return () => clearInterval(timer);
-  }, [isOpen]);
+  }, [isOpen, title]);
+
+  const handlePrimaryClick = () => {
+    // Rastreamento do Pixel ao aceitar upgrade
+    if (typeof (window as any).fbq === 'function') {
+      (window as any).fbq('track', 'InitiateCheckout', {
+        content_name: title,
+        value: parseFloat(price.replace('R$ ', '').replace(',', '.')),
+        currency: 'BRL'
+      });
+    }
+  };
 
   if (!isOpen) return null;
 
@@ -91,7 +111,8 @@ const UpgradePopup: React.FC<UpgradePopupProps> = ({
           <a 
             href={primaryUrl} 
             target="_blank" 
-            className="block w-full py-5 bg-[#d4a853] text-[#0f0f1b] font-black rounded-2xl uppercase mb-4 hover:scale-[1.03] active:scale-[0.97] transition-all shadow-[0_10px_25px_rgba(212,168,83,0.3)] text-base"
+            onClick={handlePrimaryClick}
+            className="block w-full py-5 bg-[#d4a853] text-[#0f0f1b] font-black rounded-2xl uppercase mb-4 hover:scale-[1.03] active:scale-[0.97] transition-all shadow-[0_10px_25px_rgba(212,168,83,0.3)] text-base text-center"
           >
             {primaryText}
           </a>
@@ -99,7 +120,7 @@ const UpgradePopup: React.FC<UpgradePopupProps> = ({
           <a 
             href={secondaryUrl} 
             target="_blank" 
-            className="block w-full py-2 text-white/30 font-bold uppercase text-[10px] tracking-widest hover:text-white/60 transition-colors"
+            className="block w-full py-2 text-white/30 font-bold uppercase text-[10px] tracking-widest hover:text-white/60 transition-colors text-center"
           >
             {secondaryText}
           </a>

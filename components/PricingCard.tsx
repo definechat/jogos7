@@ -10,6 +10,23 @@ interface PricingCardProps {
 const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
   const isClassic = plan.variant === 'classic';
 
+  const handleAction = () => {
+    // Rastreamento do Pixel
+    if (typeof (window as any).fbq === 'function') {
+      (window as any).fbq('track', 'InitiateCheckout', {
+        content_name: plan.title,
+        value: parseFloat(plan.price.replace('R$ ', '').replace(',', '.')),
+        currency: 'BRL'
+      });
+    }
+
+    if (plan.buttonUrl === '#') {
+      onUpgradeClick?.();
+    } else {
+      window.open(plan.buttonUrl, '_blank');
+    }
+  };
+
   return (
     <div 
       className={`bg-white rounded-2xl p-8 mb-6 border-4 transition-all ${
@@ -66,7 +83,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
       </div>
 
       <button 
-        onClick={() => plan.buttonUrl === '#' ? onUpgradeClick?.() : window.open(plan.buttonUrl, '_blank')}
+        onClick={handleAction}
         className={`w-full py-5 px-6 rounded-xl font-black text-center transition-all shadow-lg hover:brightness-110 active:scale-[0.98] uppercase tracking-tight text-lg ${
           isClassic 
             ? 'bg-[#1e40af] text-[#facc15] border-b-4 border-blue-900' 
