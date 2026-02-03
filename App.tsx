@@ -44,7 +44,7 @@ const App: React.FC = () => {
     {
       id: 'standard',
       badge: 'Mais Vendido',
-      title: 'Pack Super Nintendo',
+      title: 'Pack Super Nintendo - 945 Jogos',
       price: 'R$ 29,90',
       originalPrice: 'R$ 38,00',
       benefits: [
@@ -65,7 +65,7 @@ const App: React.FC = () => {
     {
       id: 'premium',
       badge: '💎 RECOMENDADO - VIP',
-      title: 'Pack Locadora Master',
+      title: 'PACK MULTI-VÍDEO-GAMES',
       price: 'R$ 47,90',
       originalPrice: 'R$ 198,00',
       benefits: [
@@ -81,7 +81,7 @@ const App: React.FC = () => {
       ],
       buttonText: '👉 Adquirir Pack Completo',
       buttonUrl: 'https://pay.wiapy.com/R27ONnaVxW',
-      accentColor: '#22c55e',
+      accentColor: '#1e40af',
       variant: 'classic',
       image: 'https://i.imgur.com/rMpvc9l.jpeg'
     }

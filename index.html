@@ -15,8 +15,15 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.06); }
         }
+        @keyframes pulse-zoom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+        }
         .animate-pulse-custom {
             animation: pulse-custom 1.4s infinite;
+        }
+        .animate-pulse-zoom {
+            animation: pulse-zoom 2s infinite ease-in-out;
         }
     </style>
 <script type="importmap">
