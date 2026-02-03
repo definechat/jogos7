@@ -16,7 +16,6 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      // Redireciona para o checkout do plano premium na saída
       window.location.href = 'https://pay.wiapy.com/R27ONnaVxW';
     };
     window.history.pushState(null, '', window.location.href);
@@ -37,7 +36,7 @@ const App: React.FC = () => {
         'Suporte por E-mail'
       ],
       buttonText: 'Adquirir Oferta Básica',
-      buttonUrl: 'https://pay.wiapy.com/eekA_AHWpV',
+      buttonUrl: '#',
       accentColor: '#94a3b8',
       variant: 'minimal'
     },
@@ -58,7 +57,7 @@ const App: React.FC = () => {
         'Total: 945 Jogos'
       ],
       buttonText: '👉 Adquirir 945 Jogos',
-      buttonUrl: 'https://pay.wiapy.com/Bcs9vP6KOo',
+      buttonUrl: '#',
       accentColor: '#22c55e',
       variant: 'minimal'
     },
@@ -254,48 +253,44 @@ const App: React.FC = () => {
       <UpgradePopup 
         isOpen={activePopup === 'basic'}
         onClose={() => setActivePopup(null)}
-        badge="OPORTUNIDADE ÚNICA"
-        title="Pacote Master (945 Jogos)"
-        price="R$ 19,00"
+        badge="OFERTA RELÂMPAGO"
+        title="Upgrade: Pack 945 Jogos SNES"
+        price="R$ 19,90"
+        image="https://i.ibb.co/WpDrm2L4/TOTAL.jpg"
         benefits={[
-          "Todos os 945 Jogos SNES",
-          "Suporte Prioritário",
-          "Vídeo Tutorial Passo a Passo",
-          "Acesso Vitalício no Drive"
+          "Todos os 945 Jogos Inesquecíveis",
+          "Donkey Kong, Mortal Kombat e +",
+          "Suporte VIP via WhatsApp",
+          "Vídeo Aula Passo a Passo",
+          "Acesso Vitalício no Google Drive"
         ]}
-        primaryUrl="https://pay.wiapy.com/Bcs9vP6KOo"
+        primaryUrl="https://pay.wiapy.com/M6jtVThEY"
         secondaryUrl="https://pay.wiapy.com/eekA_AHWpV"
-        primaryText="QUERO O PACOTE MASTER"
-        secondaryText="Não, quero apenas 10 jogos"
+        primaryText="SIM! LIBERAR 945 JOGOS POR R$ 19,90"
+        secondaryText="Não, quero continuar com a oferta de 10 reais"
       />
 
       <UpgradePopup 
         isOpen={activePopup === 'standard'}
         onClose={() => setActivePopup(null)}
-        badge="UPGRADE FINAL"
-        title="Combo Locadora Completa"
+        badge="OFERTA RELÂMPAGO"
+        title="Upgrade: Locadora Completa (PS2, PS1, N64)"
         price="R$ 37,90"
+        image="https://i.imgur.com/rMpvc9l.jpeg"
         benefits={[
-          "PS2 + PS1 + SNES + MEGA DRIVE",
-          "N64 + GAME BOY + PACK EXTRA",
-          "Bônus: Pack de Wallpapers Retro",
-          "Grupo VIP de Suporte"
+          "TUDO LIBERADO: PS2, PS1, N64 e SNES",
+          "Mega Drive, Game Boy e Pack Extras",
+          "Suporte Prioritário Permanente",
+          "Acesso Vitalício e Imediato",
+          "Funciona 100% Offline"
         ]}
-        primaryUrl="https://pay.wiapy.com/R27ONnaVxW"
+        primaryUrl="https://pay.wiapy.com/GaTzXJTNW"
         secondaryUrl="https://pay.wiapy.com/Bcs9vP6KOo"
-        primaryText="QUERO TUDO LIBERADO"
-        secondaryText="Não, ficar só com o SNES"
+        primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
+        secondaryText="Não, quero apenas o Super Nintendo"
       />
 
       <FakeNotification />
-      
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        html { scroll-behavior: smooth; }
-      `}</style>
     </div>
   );
 };

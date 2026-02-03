@@ -19,11 +19,18 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.04); }
         }
+        @keyframes neon-blue {
+            0%, 100% { box-shadow: 0 0 10px rgba(30, 64, 175, 0.4), 0 0 20px rgba(30, 64, 175, 0.2); border-color: #1e40af; }
+            50% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.8), 0 0 45px rgba(59, 130, 246, 0.4); border-color: #3b82f6; }
+        }
         .animate-pulse-custom {
             animation: pulse-custom 1.4s infinite;
         }
         .animate-pulse-zoom {
             animation: pulse-zoom 2s infinite ease-in-out;
+        }
+        .animate-neon-blue {
+            animation: neon-blue 2s infinite ease-in-out;
         }
     </style>
 <script type="importmap">

@@ -12,9 +12,9 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
 
   return (
     <div 
-      className={`bg-white rounded-2xl p-8 mb-6 border-4 transition-all shadow-xl ${
+      className={`bg-white rounded-2xl p-8 mb-6 border-4 transition-all ${
         isClassic 
-          ? 'border-[#1e40af] animate-pulse-zoom z-10 relative shadow-blue-500/20' 
+          ? 'animate-neon-blue z-10 relative' 
           : 'border-gray-200'
       }`}
     >
@@ -69,7 +69,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, onUpgradeClick }) => {
         onClick={() => plan.buttonUrl === '#' ? onUpgradeClick?.() : window.open(plan.buttonUrl, '_blank')}
         className={`w-full py-5 px-6 rounded-xl font-black text-center transition-all shadow-lg hover:brightness-110 active:scale-[0.98] uppercase tracking-tight text-lg ${
           isClassic 
-            ? 'bg-[#1e40af] text-[#facc15] shadow-blue-900/40 border-b-4 border-blue-900' 
+            ? 'bg-[#1e40af] text-[#facc15] border-b-4 border-blue-900' 
             : 'text-white shadow-gray-400/20'
         }`}
         style={!isClassic ? { backgroundColor: plan.accentColor } : {}}
