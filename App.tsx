@@ -152,11 +152,11 @@ const App: React.FC = () => {
             <p className="text-gray-600 font-bold mb-6 text-sm uppercase tracking-widest">Depoimentos dos Nossos Alunos</p>
             <VideoPlayer 
               videoId="Ta7ZqtwHuu8" 
-              label="Marcelo: 'Meus filhos amaram o Pack'" 
+              label="Mike e keven, Eu resolvi aparecer para tranquilizar a todos!" 
             />
             <VideoPlayer 
               videoId="tOfgjOZOZiE" 
-              label="Carlos Kaká: 'Revivi momentos mágicos'" 
+              label="Carlos Kaká: 'Revivi momentos da minha infancia'" 
             />
           </div>
 
@@ -225,7 +225,7 @@ const App: React.FC = () => {
 
           <div className="bg-gray-50 p-8 rounded-3xl text-center w-full">
             <h3 className="text-2xl font-black mb-4">7 DIAS DE GARANTIA</h3>
-            <img src="https://i.ibb.co/JNDVpJb/unnamed-1.webp" alt="Selo de Garantia" className="w-32 mx-auto" />
+            <img src="https://i.ibb.co/JNDVpJb/unnamed-1.webp" alt="Selo de Garantia" className="w-full max-w-[420px] mx-auto shadow-xl rounded-xl" />
           </div>
         </div>
       </section>
