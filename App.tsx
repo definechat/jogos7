@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import UrgencyBar from './components/UrgencyBar.tsx';
 import CountdownTimer from './components/CountdownTimer.tsx';
@@ -16,7 +15,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      window.location.href = 'https://pay.wiapy.com/R27ONnaVxW';
+      window.location.href = 'https://pay.lowify.com.br/checkout?product_id=vO5XU4';
     };
     window.history.pushState(null, '', window.location.href);
     window.addEventListener('popstate', handlePopState);
@@ -84,7 +83,7 @@ const App: React.FC = () => {
         '🎁 Bônus: Guia de Controles'
       ],
       buttonText: '👉 Adquirir Pack Completo',
-      buttonUrl: 'https://pay.wiapy.com/R27ONnaVxW',
+      buttonUrl: 'https://pay.lowify.com.br/checkout?product_id=vO5XU4',
       accentColor: '#1e40af',
       trackingId: 'btn_oferta_47_final',
       buttonId: 'btn_47', // ID SOLICITADO
@@ -252,8 +251,8 @@ const App: React.FC = () => {
           "Tutorial em vídeo - Instalou, Jogou!",
           "Acesso Vitalício direto no seu Google Drive"
         ]}
-        primaryUrl="https://pay.wiapy.com/M6jtVThEY"
-        secondaryUrl="https://pay.wiapy.com/eekA_AHWpV"
+        primaryUrl="https://pay.lowify.com.br/checkout?product_id=6hH2Hr"
+        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=nU2bLq"
         primaryText="SIM! LIBERAR 945 JOGOS POR R$ 19,90"
         secondaryText="Não, quero continuar com a oferta anterior de 10"
         upsellTrackingId="btn_upsell_19_90"
@@ -277,8 +276,8 @@ const App: React.FC = () => {
           "Jogue God of War, GTA e Mario 64 no Celular",
           "100% Seguro, Vitalício e Offline"
         ]}
-        primaryUrl="https://pay.wiapy.com/GaTzXJTNW"
-        secondaryUrl="https://pay.wiapy.com/Bcs9vP6KOo"
+        primaryUrl="https://pay.lowify.com.br/checkout?product_id=ENDBC6"
+        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=kBscDn"
         primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
         secondaryText="Não, quero continuar com a oferta anterior de 29,90"
         upsellTrackingId="btn_upsell_37_90"
