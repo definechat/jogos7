@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      window.location.href = 'https://pay.lowify.com.br/checkout?product_id=vO5XU4';
+      window.location.href = 'http://checkout.pingopay.com.br/index.php?product=prod-99100a0f';
     };
     window.history.pushState(null, '', window.location.href);
     window.addEventListener('popstate', handlePopState);
@@ -83,7 +83,7 @@ const App: React.FC = () => {
         '🎁 Bônus: Guia de Controles'
       ],
       buttonText: '👉 Adquirir Pack Completo',
-      buttonUrl: 'https://pay.lowify.com.br/checkout?product_id=vO5XU4',
+      buttonUrl: 'http://checkout.pingopay.com.br/index.php?product=prod-99100a0f',
       accentColor: '#1e40af',
       trackingId: 'btn_oferta_47_final',
       buttonId: 'btn_47', // ID SOLICITADO
@@ -232,7 +232,7 @@ const App: React.FC = () => {
       <footer className="bg-white border-t border-gray-100 py-12 text-center px-6">
         <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest leading-relaxed mb-4">
           Este site não é afiliado ao Google, Meta ou Nintendo. <br/>
-          Copyright © 2025 Jogos Retro Mobile. Todos os direitos reservados.
+          Copyright © 2026 Jogos Retro Mobile. Todos os direitos reservados.
         </p>
       </footer>
 
@@ -251,8 +251,8 @@ const App: React.FC = () => {
           "Tutorial em vídeo - Instalou, Jogou!",
           "Acesso Vitalício direto no seu Google Drive"
         ]}
-        primaryUrl="https://pay.lowify.com.br/checkout?product_id=6hH2Hr"
-        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=nU2bLq"
+        primaryUrl="http://checkout.pingopay.com.br/index.php?product=prod-264752f1"
+        secondaryUrl="http://checkout.pingopay.com.br/index.php?product=prod-cc3d6246"
         primaryText="SIM! LIBERAR 945 JOGOS POR R$ 19,90"
         secondaryText="Não, quero continuar com a oferta anterior de 10"
         upsellTrackingId="btn_upsell_19_90"
@@ -276,8 +276,8 @@ const App: React.FC = () => {
           "Jogue God of War, GTA e Mario 64 no Celular",
           "100% Seguro, Vitalício e Offline"
         ]}
-        primaryUrl="https://pay.lowify.com.br/checkout?product_id=ENDBC6"
-        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=kBscDn"
+        primaryUrl="http://checkout.pingopay.com.br/index.php?product=prod-20cef53f"
+        secondaryUrl="http://checkout.pingopay.com.br/index.php?product=prod-6bc51201"
         primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
         secondaryText="Não, quero continuar com a oferta anterior de 29,90"
         upsellTrackingId="btn_upsell_37_90"
