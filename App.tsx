@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      window.location.href = 'http://checkout.pingopay.com.br/index.php?product=prod-99100a0f';
+      window.location.href = 'https://pay.lowify.com.br/checkout?product_id=vO5XU4';
     };
     window.history.pushState(null, '', window.location.href);
     window.addEventListener('popstate', handlePopState);
@@ -36,9 +36,9 @@ const App: React.FC = () => {
       ],
       buttonText: 'Adquirir Oferta Básica',
       buttonUrl: '#',
-      accentColor: '#22c55e',
+      accentColor: '#22c55e', // Alterado para Verde conforme solicitado
       trackingId: 'btn_oferta_10_principal',
-      buttonId: 'btn_10',
+      buttonId: 'btn_10', // ID SOLICITADO
       variant: 'minimal'
     },
     {
@@ -61,7 +61,7 @@ const App: React.FC = () => {
       buttonUrl: '#',
       accentColor: '#22c55e',
       trackingId: 'btn_oferta_29_principal',
-      buttonId: 'btn_29',
+      buttonId: 'btn_29', // ID SOLICITADO
       variant: 'minimal',
       image: 'https://i.imgur.com/hR4WQ5l.png'
     },
@@ -83,10 +83,10 @@ const App: React.FC = () => {
         '🎁 Bônus: Guia de Controles'
       ],
       buttonText: '👉 Adquirir Pack Completo',
-      buttonUrl: 'http://checkout.pingopay.com.br/index.php?product=prod-99100a0f',
+      buttonUrl: 'https://pay.lowify.com.br/checkout?product_id=vO5XU4',
       accentColor: '#1e40af',
       trackingId: 'btn_oferta_47_final',
-      buttonId: 'btn_47',
+      buttonId: 'btn_47', // ID SOLICITADO
       variant: 'classic',
       image: 'https://i.imgur.com/rMpvc9l.jpeg'
     }
@@ -251,12 +251,12 @@ const App: React.FC = () => {
           "Tutorial em vídeo - Instalou, Jogou!",
           "Acesso Vitalício direto no seu Google Drive"
         ]}
-        primaryUrl="http://checkout.pingopay.com.br/index.php?product=prod-264752f1"
-        secondaryUrl="http://checkout.pingopay.com.br/index.php?product=prod-cc3d6246"
+        primaryUrl="https://pay.lowify.com.br/checkout?product_id=6hH2Hr"
+        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=nU2bLq"
         primaryText="SIM! LIBERAR 945 JOGOS POR R$ 19,90"
         secondaryText="Não, quero continuar com a oferta anterior de 10"
         upsellTrackingId="btn_upsell_19_90"
-        upsellButtonId="btn_19"
+        upsellButtonId="btn_19" // ID SOLICITADO
         confirmTrackingId="btn_oferta_10_confirmado"
         confirmPriceValue={10.00}
       />
@@ -276,12 +276,12 @@ const App: React.FC = () => {
           "Jogue God of War, GTA e Mario 64 no Celular",
           "100% Seguro, Vitalício e Offline"
         ]}
-        primaryUrl="http://checkout.pingopay.com.br/index.php?product=prod-20cef53f"
-        secondaryUrl="http://checkout.pingopay.com.br/index.php?product=prod-6bc51201"
+        primaryUrl="https://pay.lowify.com.br/checkout?product_id=ENDBC6"
+        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=kBscDn"
         primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
         secondaryText="Não, quero continuar com a oferta anterior de 29,90"
         upsellTrackingId="btn_upsell_37_90"
-        upsellButtonId="btn_37"
+        upsellButtonId="btn_37" // ID SOLICITADO
         confirmTrackingId="btn_oferta_29_confirmado"
         confirmPriceValue={29.90}
       />
@@ -292,7 +292,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-```
-
-O Netlify vai identificar a alteração assim que salvar no GitHub e atualizará sua página de vendas em poucos segundos!
