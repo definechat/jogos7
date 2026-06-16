@@ -277,7 +277,7 @@ const App: React.FC = () => {
           "100% Seguro, Vitalício e Offline"
         ]}
         primaryUrl="https://pay.lowify.com.br/checkout?product_id=ENDBC6"
-        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=kBscDn"
+        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=1VHyif"
         primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
         secondaryText="Não, quero continuar com a oferta anterior de 29,90"
         upsellTrackingId="btn_upsell_37_90"
