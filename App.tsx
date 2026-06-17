@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      window.location.href = 'https://pay.lowify.com.br/checkout?product_id=vO5XU4';
+      window.location.href = 'https://pingopay.com.br/checkout.php?p=bb86e293b995d34858d0d4e48c9934dc';
     };
     window.history.pushState(null, '', window.location.href);
     window.addEventListener('popstate', handlePopState);
@@ -83,7 +83,7 @@ const App: React.FC = () => {
         '🎁 Bônus: Guia de Controles'
       ],
       buttonText: '👉 Adquirir Pack Completo',
-      buttonUrl: 'https://pay.lowify.com.br/checkout?product_id=vO5XU4',
+      buttonUrl: 'https://pingopay.com.br/checkout.php?p=bb86e293b995d34858d0d4e48c9934dc',
       accentColor: '#1e40af',
       trackingId: 'btn_oferta_47_final',
       buttonId: 'btn_47', // ID SOLICITADO
@@ -251,8 +251,8 @@ const App: React.FC = () => {
           "Tutorial em vídeo - Instalou, Jogou!",
           "Acesso Vitalício direto no seu Google Drive"
         ]}
-        primaryUrl="https://pay.lowify.com.br/checkout?product_id=6hH2Hr"
-        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=nU2bLq"
+        primaryUrl="https://pingopay.com.br/checkout.php?p=afd9edd912382802b813aae2e58a5a4e"
+        secondaryUrl="https://pingopay.com.br/checkout.php?p=cdd060e1b7309b9f4f74bcedfd9523f9"
         primaryText="SIM! LIBERAR 945 JOGOS POR R$ 19,90"
         secondaryText="Não, quero continuar com a oferta anterior de 10"
         upsellTrackingId="btn_upsell_19_90"
@@ -276,8 +276,8 @@ const App: React.FC = () => {
           "Jogue God of War, GTA e Mario 64 no Celular",
           "100% Seguro, Vitalício e Offline"
         ]}
-        primaryUrl="https://pay.lowify.com.br/checkout?product_id=ENDBC6"
-        secondaryUrl="https://pay.lowify.com.br/checkout?product_id=1VHyif"
+        primaryUrl="https://pingopay.com.br/checkout.php?p=9ff5911465ab8064cf2b8f236bcc3837"
+        secondaryUrl="https://pingopay.com.br/checkout.php?p=d39d9c8700d757955ac795884b445759"
         primaryText="SIM! QUERO TUDO LIBERADO POR R$ 37,90"
         secondaryText="Não, quero continuar com a oferta anterior de 29,90"
         upsellTrackingId="btn_upsell_37_90"
